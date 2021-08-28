@@ -1,0 +1,297 @@
+
+    /* ---------------------- */
+
+    @media print {
+        .all_buttons, #add_room_div { 
+          visibility: hidden;
+        }
+        #main_div {
+            font-size: 16px;
+        }
+        .table_col {
+            font-size: 16px !important;
+        }
+        .labor_task_cl {
+            font-size: 16px !important; 
+        }
+    }
+
+    /* --------------------- */
+    @media print and (max-width: 473px) {
+      .all_buttons, #add_room_div { 
+          visibility: hidden;
+        }
+        #main_div {
+            font-size: 16px;
+        }
+        .table_col {
+            font-size: 16px !important;
+        }
+        .labor_task_cl {
+            font-size: 16px !important; 
+        }
+
+        html, button, input, p, body, header, div, span {
+            font-size: 4vw !important;
+        }
+
+        .complete_cb {
+            margin-left: 0px !important;
+            width: 2vw;
+            height: 20vw;
+        }
+
+        #logo {
+          width: 2vw;
+          height: 0.5vw;
+          max-width: 30%;
+          
+        }
+        header {
+          background-color: transparent;
+        }
+
+        .labor_container {
+            font-size: 3vw;
+            /* height: 5px; */
+        }
+
+        .room_sec, #total_hour, #print_bt, #add_room_div {
+          margin-left: 0px !important;
+          margin-right: 0px !important;
+        }
+
+        .room_hd {
+          font-size: 3vw;
+        }
+
+        #date_hd {
+          margin-top: 0px;
+        }
+    }
+
+
+    /* ----------- iPhone X ----------- */
+    @media screen and (max-width: 473px)
+    {
+        html, button, input, p, body, header, div, span {
+            font-size: 4vw !important;
+        }
+
+        html {
+          background-attachment: fixed;
+        }
+        .complete_cb {
+            margin-left: 0px !important;
+            width: 2vw;
+            height: 20vw;
+        }
+
+        .all_buttons {
+            font-size: 4vw;
+        }
+
+        #logo {
+          width: 2vw;
+          height: 0.5vw;
+          max-width: 30%;
+          
+        }
+
+        .labor_container {
+            font-size: 3vw;
+            /* height: 5px; */
+        }
+
+        .room_sec, #total_hour, #print_bt, #add_room_div {
+          margin-left: 0px !important;
+          margin-right: 0px !important;
+        }
+
+        .room_hd {
+          font-size: 3vw;
+        }
+
+        #date_hd {
+          margin-top: 0px;
+        }
+    }
+    /*------------------------------------------------------------------------*/
+        html {
+          background-image: url("../images/background_blurred.png");
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover;
+          background-attachment: fixed;
+          
+        }
+
+        #print_bt {
+          margin-left: 30px;
+        }
+
+        body {
+           
+            border-radius: 5px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 23px;
+            /* background-image: linear-gradient(to bottom, #ed5757, #eb664d, #e77445, #e18240, #da8f3e, #d49b43, #cfa64b, #c9b056, #c5bb67, #c2c67a, #c1d08d, #c1d9a0);     */
+        }
+        
+        .labor_container {
+            display: grid;
+            grid-template-columns: 15% 75% 10%;
+            padding-left: 0px;
+            padding-right: 0px;
+            height: 30px;
+        }
+    
+        #add_room_div {
+            margin-left: 30px;
+            margin-bottom: 30px;
+            margin-top: 5px;
+            height: 30px;
+        }
+    
+        .room_sec {
+          border-radius: 5px;
+          background-color: #fbba72;
+          margin-left: 30px;
+          font-size: 25px;
+          border: 1px solid #3b3b3b;
+        }
+    
+        #container {
+          text-align: center;
+          position: relative;
+        }
+    
+        .table_col
+        {
+            font-weight: bold;
+            display: grid;
+            line-height: 0px;
+            grid-template-columns: 15% 70% 15%;
+            background-color: #eefcce;
+            text-align: center;
+            font-size: 18px;
+            border-bottom: 1px solid black;
+        }
+    
+        .room_hd {
+            line-height: 32px;
+            color:rgb(255,255,255);
+            font-size: 20px;
+            background-color: #bc432a;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            text-transform: uppercase;
+            border-bottom: 3px solid rgb(0, 0, 0);
+        }
+    
+        .labor_task_cl {
+          cursor: pointer;
+          position: relative;
+          margin: 0px;
+          background: rgb(255, 255, 255);
+          font-size: 25px;
+          /* width | style | color */
+          border: 1px solid grey;
+        }
+
+        #add_room_bt {
+            margin-top: 10px;
+            display: block;
+        }
+    
+        .all_buttons {
+            padding: 4px 7px;
+            font-size: 20px;
+            text-align: center;
+            cursor: pointer;
+            outline: none;
+            color: rgb(0, 0, 0);
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 5px #999;
+            margin-bottom: 10px;
+        }
+    
+        .all_buttons:hover {background-color: #FFDAAA}
+    
+        .all_buttons:active {
+            opacity: 70%;
+            background-color: #3a2c0049;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+        
+        header {
+            background-color: black;
+            color: white;
+            /* position: fixed; */
+            display: block;
+            height: 20%;
+
+        }
+
+        #logo {
+         
+            width: 200px;
+            height: auto;
+            /* margin-left: auto;
+            margin-right: auto; */
+            opacity: 80%;
+            
+        }
+    
+        .complete_cb {
+            margin-left: 1vm !important;
+            width: 20px;
+            height: 20px;
+        }
+    
+        #nav_bar {
+          background-color: black;
+          color: white;
+          position: fixed;
+          width: 100%;
+        }
+
+        .border {
+            display: block;
+            background-color: rgb(240, 243, 216);
+        }
+    
+        #date_hd {
+            margin-top: -10px;
+            font-size: 20px;
+            margin-right: 5;
+            text-align: right;
+            display: block;
+            color: white;
+            opacity: 80%;
+        }
+    
+        #total_hour {
+            display:block;
+            margin-right: 15px;
+            text-align: right;
+            position: relative;  
+            color: white;
+            opacity: 80%;
+            background-color: none;
+            font-size: 20px;
+            
+        }
+    
+        #room_name_input {
+            font-size: 20px;
+            height: 30px;
+        }
+
+        /* .info_div {
+          margin-top: 50px;
+          font-weight: bold;
+        } */

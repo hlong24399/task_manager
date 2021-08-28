@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="assets/css/stylesheet.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<html lang="en">
+    <!-- <img src="assets/images/background.jpeg" id="bg_img"> -->
+    <head>
+      <meta charset="utf-8">
+      <!-- <meta name="viewport" content="width=device-width" /> -->
+      <meta name="viewport" content="width=device-width, initial-scale=1"/>
+      <title>Labor Sheet for ______________</title>
+      <meta name="description" content="A simple HTML5 Template for new projects.">
+      <meta name="author" content="SitePoint">
+
+    </head>
+
+    <body>
+        <header>
+              <img id="logo" src="assets/images/logo.jpeg" alt="1TouchAV" style="margin-left: auto; margin-right: auto; display:block;">
+              <h4><span id="date_hd"></span></h4>
+              <h4><span id="total_hour">Total hour:  </span></h4>
+        </header>
+
+        <div style="margin-top: 130px;">
+            <button id="print_bt" class="all_buttons fa" style="position: relative; background-color: tomato; font-size: 40px; width: 60px;" onclick="window.print(); return false;"> &#xf02f; </button>
+        </div>
+        <div id="main_div"></div>
+        <div id="add_room_div">
+            <input type="text" style="font-style: italic;" style="font-size: 40px;" placeholder="Enter a room..." id="room_name_input">
+            <button type="button" id="add_room_bt" class="all_buttons">ADD ROOM</button>
+        </div>
+        </div>
+    </body>
+   
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/script.js"></script>

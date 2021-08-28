@@ -24,6 +24,9 @@ app.use(session({
 const flow = require('./routes/user_flow');
 app.use('/', flow);
 
+const elr = require("express-list-routes");
+elr(app);
+
 app.listen(PORT, () => {
   console.log('Server connected at:', PORT);
 });

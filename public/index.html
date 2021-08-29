@@ -25,8 +25,8 @@
         </div>
         <div id="main_div"></div>
         <div id="add_room_div">
-            <form action="http://google.com" method="GET">
-                <input type="text" style="font-style: italic;" style="font-size: 40px;" placeholder="Enter a room..." id="room_name_input">
+            <form action="/mongoose/saveroom" method="POST">
+                <input type="text" style="font-style: italic;" name="room_name_input" placeholder="Enter a room..." id="room_name_input">
                 <button type="submit" id="add_room_bt" class="all_buttons">ADD ROOM</button>
             </form>
         </div>

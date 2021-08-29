@@ -1,8 +1,9 @@
 //Store each room section as element.
 room_object = [];
-
 //Total hour store
 total_h = 0;
+//Helper for room control
+var iRoom = 0;
 
 function Room(id, name, labor_order, cb_count) {
     this.id = id;
@@ -12,17 +13,15 @@ function Room(id, name, labor_order, cb_count) {
 };
 
 $(document).ready(function (){
-    //Setting up the current date
-    
+    //current date
     $("#date_hd").text(() => {
-    var month_now = new Date().getMonth();
-    var year_now = new Date().getFullYear();
-    var date_now = new Date().getDate();
-    return `Today: ${month_now}/${date_now}/${year_now}`
-}); 
+        var month_now = new Date().getMonth();
+        var year_now = new Date().getFullYear();
+        var date_now = new Date().getDate();
+        return `Today: ${month_now}/${date_now}/${year_now}`
+    }); 
     
     //Adding room
-    var iRoom = 0;
     $("#add_room_bt").click((e)=>{
         var rname = $("#room_name_input").val();
         if (!rname){ 
@@ -46,7 +45,7 @@ $(document).ready(function (){
         iRoom = iRoom + 1;
         html = $.parseHTML(new_div);
         $("#main_div").append(html);
-        $("#room_name_input").val("");
+        // $("#room_name_input").val("");
     });
 
     // complete_boxes = [];
@@ -75,8 +74,9 @@ $(document).ready(function (){
       var clicked_id = $(this).attr("id").slice(-1);
       var labor_list = $(`.labor_input${clicked_id}`);
       var current_order = room_object[parseInt(clicked_id)].labor_order;
+      
       $.each(labor_list, function(idx, val) {
-          // Change the labor title
+        // Change the labor title
         var new_elem = document.createElement("p");
         new_elem.setAttribute("id", `labor_ro${clicked_id}_or${current_order}`);
         new_elem.setAttribute("class", "labor_task_cl");
@@ -87,7 +87,8 @@ $(document).ready(function (){
         $(`#cb_ro${clicked_id}_b${current_order}`).show();
         val.replaceWith(new_elem);
         current_order+=1;
-    })
+      })
+
       //Change the labor hour
       current_order = room_object[parseInt(clicked_id)].labor_order;
       var hour_list = $(`.hour_input${clicked_id}`);

@@ -18,4 +18,4 @@ Create and manage tasks without the need of using papers.
 * Print form is available.
 
 ## Demo
-![image](demo-img/demo1.png)
+![image](demo_img/demo1.png)

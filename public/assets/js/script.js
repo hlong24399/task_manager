@@ -30,7 +30,7 @@ $(document).ready(function (){
         var month_now = new Date().getMonth();
         var year_now = new Date().getFullYear();
         var date_now = new Date().getDate();
-        return `Today: ${month_now}/${date_now}/${year_now}`
+        return `Today: ${month_now+1}/${date_now}/${year_now}`
     }); 
     
     //Adding room

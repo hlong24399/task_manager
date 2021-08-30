@@ -8,7 +8,8 @@ const session = require('express-session');
 router.get('/', (req,res) => { 
     console.log("just a start");
     console.log();
-    res.sendFile('views/login.html', {root: "./"});
+    // res.sendFile('views/login.html', {root: "./"});
+    res.redirect("/public");
 })
 
 
@@ -31,23 +32,6 @@ router.post('/verify', (req,res) =>{
         res.sendFile('views/login.html', {root: "./"});
     }
 })
-
-// router.post('/save', function(req, res) {
-//     console.log(req.body);
-//     var new_room = {r_id: 1, r_name: req.body, r_labor_count: 0};
-//     var newRoom = new RoomModel(new_room);
-//     // var newLabor = new LaborModel({l_id: 1, l_order: 2, l_title: "test_labor", l_hour: 4, l_status: true});
-//     // newLabor.save();
-//     newRoom.save(function(err, data) {
-//         if (err) {
-//             console.log("error in newRoom");
-//         }
-//         else {
-//             console.log("data is in");
-//         }
-//     });
-//     res.redirect("../public");
-// });
 
 
 

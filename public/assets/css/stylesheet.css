@@ -153,7 +153,18 @@
             margin-top: 5px;
             height: 30px;
         }
-    
+        #save_state_bt {
+          position: relative; 
+          background-color: rgb(163, 206, 107);
+          font-size: 28px; 
+          width: 90px;
+        }
+
+        #logout_bt {
+          background-color: rgb(233, 120, 101);
+          font-size: 28px; 
+          width: 105px;
+        }
         .room_sec {
           border-radius: 5px;
           background-color: #fbba72;

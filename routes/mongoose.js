@@ -9,6 +9,9 @@ var util = require('util');
 
 var mongoDB = `mongodb+srv://admin:${process.env.ADMIN_PW}@task-manager-cluster.cggbp.mongodb.net/taskdb?retryWrites=true&w=majority`;
 
+router.use(express.json()) // for parsing application/json
+router.use(express.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
+
 //Get the default connection
 const db = (mongoDB);
 mongoose.Promise = global.Promise;
@@ -38,12 +41,12 @@ router.post('/saveroom', function(req, res) {
     });
 
 router.post('/save-state', function(req, res) { 
-    console.log("saving state");
     body_html = req.body['the_html'];
     var the_room_object = req.body['the_room_object'];
     var the_hour = parseFloat(req.body['the_hour']);
     var the_iRoom = parseInt(req.body['the_iRoom']);
-    console.log(the_room_object);
+    var the_cb_state = req.body['cb_states'];
+   
     
     fs.writeFile('./public/index.html', body_html, function (err) {
         if (err) throw err;
@@ -54,10 +57,16 @@ router.post('/save-state', function(req, res) {
     data.splice(1, 1, `room_object=${the_room_object}`);
     data.splice(3, 1, `total_h = ${the_hour};`);
     data.splice(5, 1, `iRoom = ${the_iRoom};`);
+    data.splice(7, 1, `cb_state = [${the_cb_state}];`);
     var text = data.join("\n");
+
+
+    
     fs.writeFile('./public/assets/js/script.js', text, function (err) {
         if (err) return console.log(err);
     });
+
+
     res.redirect("../public");
 });
 
@@ -75,5 +84,6 @@ router.get('/logout', function(req, res) {
 
     res.redirect("../public");
 });
+
 
 module.exports = router;

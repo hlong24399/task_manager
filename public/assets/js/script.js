@@ -3,7 +3,11 @@ room_object = [];
 //Total hour store
 total_h = 0;
 //Helper for room control
-var iRoom = 0;
+iRoom = 0;
+
+cb_state = [];
+//["cb_ro0_b0,false","cb_ro0_b1,false","cb_ro0_b2,false","cb_ro1_b0,false"];
+
 
 document.body.scrollTop = 1000;
 
@@ -15,22 +19,28 @@ function Room(id, name, labor_order, cb_count) {
 };
 
 $(document).ready(function (){
+
+
     $(document).on("click", "#save_state_bt", function (){
         $("#the_room_object").val(JSON.stringify(room_object));
         $("#the_hour").val(total_h);
         $("#the_iRoom").val(iRoom);
         var html_string = '<!DOCTYPE HTML>' + '\n' + document.documentElement.outerHTML;
         $("#the_html").val(html_string);
-        $("#temp_p").text("updated");
+        var cb_states = [];
+        $(".complete_cb").each(function () {
+            cb_states.push(`"${this.id},${$(this).is(':checked')}"`);
+        })
+        $("#cb_states").val(cb_states);
     });
     
-    
+
     //current date
     $("#date_hd").text(() => {
         var month_now = new Date().getMonth();
         var year_now = new Date().getFullYear();
         var date_now = new Date().getDate();
-        return `Today: ${month_now+1}/${date_now}/${year_now}`
+        return `Today: ${month_now}/${date_now}/${year_now}`
     }); 
     
     //Adding room
@@ -120,4 +130,13 @@ $(document).ready(function (){
       //update number of labors for this room
       room_object[parseInt(clicked_id)].labor_order = current_order;
     });
+});
+
+$(document).ready(function () {
+    for (var i = 0; i < cb_state.length ; i++) { 
+        var id = cb_state[i].split(',')[0];
+        var state = cb_state[i].split(',')[1];
+        $(`#${id}`).attr('checked', JSON.parse(state));
+        
+    }
 });

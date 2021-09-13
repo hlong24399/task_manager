@@ -12,24 +12,24 @@
     </head>
 
 
-    <body>
+    <body data-new-gr-c-s-check-loaded="14.1028.0" data-gr-ext-installed="">
         <header>
               <img id="logo" src="assets/images/logo.jpeg" alt="1TouchAV" style="margin-left: auto; margin-right: auto; display:block;">
-              <h4><span id="date_hd"></span></h4>
+              <h4><span id="date_hd">Today: 8/13/2021</span></h4>
               <h4><span id="total_hour">Total hour:  </span></h4>
         </header>
 
         <div style="margin-top: 130px;">
-            <button id="print_bt" class="all_buttons fa" style="position: relative; background-color: tomato; font-size: 40px; width: 60px;" onclick="window.print(); return false;"> &#xf02f; </button>
+            <button id="print_bt" class="all_buttons fa" style="position: relative; background-color: tomato; font-size: 40px; width: 60px;" onclick="window.print(); return false;">  </button>
             <form action="/mongoose/logout" method="GET" style="display: inline-block;">
                 <button type="submit" id="logout_bt" class="all_buttons fa"> CLEAR </button>
             </form>
             <form action="/mongoose/save-state" method="POST" style="display: inline-block;">
                 <button type="submit" id="save_state_bt" class="all_buttons fa"> SAVE </button>
                 <input id="the_html" type="hidden" name="the_html" value="default">
-                <input id="the_room_object" type="hidden" name="the_room_object" value="default">
-                <input id="the_hour" type="hidden" name="the_hour" value="default">
-                <input id="the_iRoom" type="hidden" name="the_iRoom" value="default">
+                <input id="the_room_object" type="hidden" name="the_room_object" value="[]">
+                <input id="the_hour" type="hidden" name="the_hour" value="0">
+                <input id="the_iRoom" type="hidden" name="the_iRoom" value="0">
                 <input id="cb_states" type="hidden" name="cb_states" value="default">
 
             </form>
@@ -44,4 +44,4 @@
         
         <script src="assets/js/jquery.min.js"></script>
         <script src="assets/js/script.js"></script>
-    </body>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>

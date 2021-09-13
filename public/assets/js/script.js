@@ -1,5 +1,5 @@
 //Store each room section as element.
-room_object = [];
+room_object=[]
 //Total hour store
 total_h = 0;
 //Helper for room control

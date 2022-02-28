@@ -12,11 +12,11 @@
     </head>
 
 
-    <body data-new-gr-c-s-check-loaded="14.1028.0" data-gr-ext-installed="">
+    <body data-new-gr-c-s-check-loaded="14.1050.0" data-gr-ext-installed="">
         <header>
               <img id="logo" src="assets/images/logo.jpeg" alt="1TouchAV" style="margin-left: auto; margin-right: auto; display:block;">
-              <h4><span id="date_hd">Today: 8/13/2021</span></h4>
-              <h4><span id="total_hour">Total hour:  </span></h4>
+              <h4><span id="date_hd">Today: 1/28/2022</span></h4>
+              <h4><span id="total_hour">Total hour: 5</span></h4>
         </header>
 
         <div style="margin-top: 130px;">
@@ -27,14 +27,40 @@
             <form action="/mongoose/save-state" method="POST" style="display: inline-block;">
                 <button type="submit" id="save_state_bt" class="all_buttons fa"> SAVE </button>
                 <input id="the_html" type="hidden" name="the_html" value="default">
-                <input id="the_room_object" type="hidden" name="the_room_object" value="[]">
-                <input id="the_hour" type="hidden" name="the_hour" value="0">
-                <input id="the_iRoom" type="hidden" name="the_iRoom" value="0">
+                <input id="the_room_object" type="hidden" name="the_room_object" value="[{&quot;id&quot;:0,&quot;name&quot;:&quot;kitchen&quot;,&quot;labor_order&quot;:2,&quot;cb_count&quot;:2}]">
+                <input id="the_hour" type="hidden" name="the_hour" value="5">
+                <input id="the_iRoom" type="hidden" name="the_iRoom" value="1">
                 <input id="cb_states" type="hidden" name="cb_states" value="default">
 
             </form>
         </div>
-        <div id="main_div"></div>
+        <div id="main_div"><div id="room0" class="room_sec">
+<h4 class="room_hd" style="text-align: center;">kitchen</h4>
+<div class="table_col">
+<p style="text-align: center; margin-top: 15px;margin-bottom: 15px;"> Hr </p>
+<p style="text-align: center; margin-top: 15px;margin-bottom: 15px;"> Labor </p>
+<p style="text-align: right; margin-top: 15px; margin-bottom: 15px; margin-right: 1vw;"> Done </p>
+</div>
+<div class="border">
+<div class="labor_container">
+<p id="hour_ro0_or0" class="labor_task_cl" style="text-align: center;">2</p>
+<p id="labor_ro0_or0" class="labor_task_cl" style="text-align: center;">Fix TV</p>
+<input type="checkbox" class="complete_cb" style="margin-left: 1em;" id="cb_ro0_b0" name="complete_name" value="complele_val">
+</div>
+</div>
+<div class="border">
+<div class="labor_container">
+<p id="hour_ro0_or1" class="labor_task_cl" style="text-align: center;">3</p>
+<p id="labor_ro0_or1" class="labor_task_cl" style="text-align: center;">AC</p>
+<input type="checkbox" class="complete_cb" style="margin-left: 1em;" id="cb_ro0_b1" name="complete_name" value="complele_val">
+</div>
+</div>
+</div>
+<div id="container">
+<button type="button" name="Add labor" id="add_bt0" class="add_labor_bt all_buttons" style="font-weight: bold; margin-top: 10px; margin-left: 35%; width: 15%;"> <span> + </span> </button>
+<button type="button" name="Submit" id="sub_labor_bt0" class="sub_labor_bt all_buttons" style="font-weight: bold; margin-top: 10px; margin-left: 15%; width: 15%;"> <span>✔</span> </button>
+</div>
+</div>
         <div id="add_room_div">
             <!-- <form action="/mongoose/saveroom" method="POST"> -->
                 <input type="text" style="font-style: italic;" name="room_name_input" placeholder="Enter a room..." id="room_name_input">
@@ -44,4 +70,4 @@
         
         <script src="assets/js/jquery.min.js"></script>
         <script src="assets/js/script.js"></script>
-    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
+    <grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></body></html>

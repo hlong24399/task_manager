@@ -1,11 +1,11 @@
 //Store each room section as element.
-room_object=[]
+room_object=[{"id":0,"name":"kitchen","labor_order":2,"cb_count":2}]
 //Total hour store
-total_h = 0;
+total_h = 5;
 //Helper for room control
-iRoom = 0;
+iRoom = 1;
 
-cb_state = [];
+cb_state = ["cb_ro0_b0,true","cb_ro0_b1,false"];
 //["cb_ro0_b0,false","cb_ro0_b1,false","cb_ro0_b2,false","cb_ro1_b0,false"];
 
 
